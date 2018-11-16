@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="zenlogic">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zenlogic - Vertical menus with semantic-ui</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.1.2/semantic.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="zenlogic-sidebar" ng-app="portal" ng-controller="MainCtrl as ctrl">
+  <!--p {{ctrl.cpanels}}-->
+  <!--select(ng-model="ctrl.currentCpanel" ng-options="cpanel.code as cpanel.name for cpanel in ctrl.cpanels")-->
+  <div class="ui labeled icon menu horizontal tabs inverted2"><a class="blue item" href="#" ng-click="ctrl.tabIndex = 1" ng-class="{active: ctrl.tabIndex == 1}"><i class="setting icon"></i>Contracts</a><a class="purple item" href="#" ng-click="ctrl.tabIndex = 2" ng-class="{active: ctrl.tabIndex == 2}"><i class="dashboard icon"></i>Control panel</a></div>
+  <!--PART 1: USER INFO-->
+  <div class="ui blue menu vertical inverted" ng-show="ctrl.tabIndex == 1"><a class="item active" href="#">Contracts<i class="home icon"></i></a>
+    <div class="item"> <i class="setting icon"></i>Settings
+      <div class="menu"><a class="item" href="#">Personal information </a><a class="item" href="#">Email      </a><a class="item" href="#">Log</a></div>
+    </div>
+    <div class="item">Payments<i class="money icon"></i>
+      <div class="menu"><a class="item" href="#">History</a><a class="item" href="#">Payment methods</a></div>
+    </div><a class="item" href="#"><i class="plus icon"></i>Subscribe a new service</a><a class="item" href="#"><i class="users icon"></i>Users</a>
+  </div>
+  <!--PART 2: CONTROL PANELS-->
+  <div class="ui purple menu vertical inverted" ng-show="ctrl.tabIndex == 2">
+    <div class="item">
+      <select ng-model="ctrl.currentCpanel" ng-options="cpanel.code as cpanel.name for cpanel in ctrl.cpanels">   </select>
+      <!--.ui.selection.dropdown
+      .default.text A0001
+      i.dropdown.icon
+      .menu.transition.hidden(tabindex="-1")
+        .item(ng-repeat="cpanel in ctrl.cpanels",data-value="{{cpanel.code}}") {{cpanel.name}}
+        
+      -->
+    </div><a class="item active" href="#"><i class="info icon"></i>Server info</a><a class="item" href="#"><i class="world icon"></i>WEB  </a><a class="item" href="#"><i class="exchange icon"></i>FTP </a><a class="item" href="#"><i class="database icon"></i>Databases </a><a class="item" href="#"><i class="mail icon"></i>Mail </a><a class="item" href="#"><i class="folder open icon"></i>Shared files</a><a class="item" href="#"><i class="flag icon"></i>Domains</a><a class="item" href="#"><i class="dropbox icon"></i>Install software</a>
+  </div>
+</div>
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

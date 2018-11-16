@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="tutor_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  
+  <link rel='stylesheet' href='https://cdn.gitcdn.xyz/cdn/angular/bower-material/v1.0.0-rc3/angular-material.css'>
+<link rel='stylesheet' href='http://localhost:8080/docs.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="cssb/style.css">
+
+            <link rel="stylesheet" href="css5/style.css">
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="menu" tabindex="0">
+	<div class="smartphone-menu-trigger"></div>
+  <header class="avatar">
+		<img src="css5/tutor.png" />
+    <h2>Tutor</h2>
+  </header>
+	<ul>
+
+    <li tabindex="0" class="svg-mapp"><span><a href=add_sem.aspx>Sem Details</a></span></li>
+    <li tabindex="0" class="icon-dashboard"><span><a href=feed.aspx>FeedBack</a></span></li>
+    <li tabindex="0" class="icon-dashboard"><span><a href="../index.html">Sign out</a></span></li>
+  </ul>
+</nav>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                <br />
+            </p>
+        
+        </asp:ContentPlaceHolder>
+        </div>
+         <div style="background-color: #FF00FF"> 
+             <br />
+    </div>
+    </form>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-messages.min.js'></script>
+<script src='https://cdn.gitcdn.xyz/cdn/angular/bower-material/v1.0.0-rc3/angular-material.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js'></script>
+
+  
+     <script  src="js5/index.js"></script>
+    <script  src="js/index.js"></script>
+    <script  src="jsc/index.js"></script>
+</body>
+</html>
